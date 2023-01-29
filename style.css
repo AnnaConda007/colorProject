@@ -63,7 +63,7 @@ li {
 }
 
 
-.form-substrate {
+.form-substrate-blue, .form-substrate-pink, .form-substrate-red {
   position: fixed;
   justify-content: center;
   align-content: center;
@@ -75,11 +75,23 @@ li {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  display: none;
+  display:none;
 }
-.form-substrate img{
+.closeBtn{
   width: 20px;
 }
+
+.form-substrate-blue .form-wrap{
+  background-color: rgb(192, 207, 255);
+}
+.form-substrate-pink .form-wrap{
+  background-color: pink;;
+}
+.form-substrate-red .form-wrap{
+  background-color: rgb(242, 10, 48);
+}
+
+
 .form-wrap {
   text-align: center;
   background-color: rgb(245, 242, 242);
@@ -89,7 +101,6 @@ li {
 
 .slider-wrap {
   display: flex;
-  margin-bottom: 30px;
   margin-top: 30px;
   justify-content: center;
 }
@@ -118,7 +129,6 @@ li {
 
 .filter-colors img {
   opacity: 0.6;
-
 }
 
 h2 {
