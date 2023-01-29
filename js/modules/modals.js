@@ -1,5 +1,7 @@
 const modals = function () {
-  alert("проверка");
+  window.addEventListener("click", () => {
+    alert("проверка");
+  });
 };
 
 export default modals;

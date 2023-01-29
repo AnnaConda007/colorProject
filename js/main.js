@@ -1,6 +1,7 @@
-import modals from "./modules/modals";
-
+// вызов функций
 window.addEventListener("DOMContentLoaded", () => {
   "use strict";
-  modals();
 });
+
+// modals
+const modal = () => {};
