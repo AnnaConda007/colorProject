@@ -12,6 +12,11 @@ main{
   grid-template-columns: 150px 1fr 150px;
 }
 
+.grid-center{
+  grid-column: 2/3;
+}
+
+
 a{
   text-decoration: none;
   color: white;
@@ -73,7 +78,6 @@ li {
     height: 20%;
   }
 .slider-wrap {
-  grid-column: 2/3;
   display: flex;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -101,15 +105,11 @@ li {
   height: 100%;
 }
 
-
-.filter-colors{
-  grid-column: 2/3;
-}
 .filter-colors  img{
   opacity: 0.6;
   
 }
-.container-colors-title h2{
+ h2{
   text-align: center;
 }
 .container-colors-title ul{
@@ -141,10 +141,64 @@ justify-items:center
 }
 
 
+.more{
+  margin-top: 15px;
+}
+
+.more h2{
+  text-decoration: underline 
+}
+
+
+
+.accordion{
+  margin-top: 20px;
+}
+
+h4{
+ margin-top: 15px;
+ text-align: center;
+}
+
+.text-accordion{
+  background-color: antiquewhite;
+}
+
+
+.phone-form{
+  margin: 15px;
+  text-align: center;
+}
+.phone-form input{
+  margin: 5px;
+}
+
+.btn-up img{
+  width: 40px;
+  margin-left: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:800px) { 
   
 .color-wrap{
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
  }
 
  main{
