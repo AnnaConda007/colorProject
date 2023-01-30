@@ -83,12 +83,17 @@ li {
 
 .form-substrate-blue .form-wrap{
   background-color: rgb(192, 207, 255);
+  width: 50%;
+
 }
 .form-substrate-pink .form-wrap{
-  background-color: pink;;
+  background-color: pink;
+  width: 80%;
+
 }
 .form-substrate-red .form-wrap{
   background-color: rgb(242, 10, 48);
+  width: 50%;
 }
 
 
