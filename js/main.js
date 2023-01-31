@@ -8,21 +8,19 @@ window.addEventListener("DOMContentLoaded", () => {
 const modal = () => {};
 
 // фильтр элементов
-
-const filterBlock = () => {
+filterBlock = () => {
   const showColor = (btn, showSelector) => {
     document.querySelector(btn).addEventListener("click", () => {
       document.querySelectorAll(".color-wrap div").forEach((div) => {
-        div.style.display = "none"; // все цвета скрываются
+        div.style.display = "none";
       });
-      if (showSelector.length > 0) {
-        document.querySelectorAll(showSelector).forEach((div) => {
-          div.style.display = "block"; // показывается только нужный цвет
-          console.log("эта часть кода срабатывает");
-        });
-      } else {
-        document.querySelector(showSelector).style.display = "block"; // показывается только нужный цвет
-      }
+      document.querySelectorAll(".title-colors li").forEach((li) => {
+        li.classList.remove("active");
+      });
+      document.querySelector(btn).classList.add("active");
+      document.querySelectorAll(showSelector).forEach((div) => {
+        div.style.display = "block";
+      });
     });
   };
 
