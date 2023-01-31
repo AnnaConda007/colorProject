@@ -26,7 +26,7 @@ const chengeImg=({img, newLink, lastLink})=>{
   hideNewImg(img, lastLink)
    
 }
-
+/*
 chengeImg({img:".pink-color img", newLink:"img/salute.png",
 lastLink:"img/allColors/pink.png"})
 
@@ -43,4 +43,4 @@ lastLink:"img/allColors/yellow.png"})
 
 
 
-
+*/
