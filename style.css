@@ -105,10 +105,7 @@ li {
   height: 100%;
 }
 
-.filter-colors  img{
-  opacity: 0.6;
-  
-}
+ 
  h2{
   text-align: center;
 }
@@ -116,18 +113,18 @@ li {
   display: flex;
   justify-content: space-around;
 }
-.container-colors-title li{
-  background-color: rgb(239, 244, 245);
-}
+
 
 .color-wrap{
   margin-top: 10px;
 display:grid;
 gap: 10px;
 grid-template-columns: repeat(6, 1fr);
-justify-items:center
+justify-items:center;
+}
 
-
+.active{
+  background-color: orange;
 }
 
 .color-wrap div{
