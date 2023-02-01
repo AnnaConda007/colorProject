@@ -4,31 +4,32 @@ const slider= ()=>{
   const backBtn = document.querySelector(".back")
   const nextBtn = document.querySelector(".next")
 const allImg = document.querySelectorAll(".slider-item-wrap")
-const wrapImg = document.querySelectorAll("slider-item-wrap")
-
  
 
+ 
+ 
 let count = 0
-allImg[count].style.display ="none"
 
 
 backBtn.addEventListener("click", ()=>{
-  allImg[count].style.display ="block"
- count--
- checkCount()
- allImg[count].style.display ="none"
-
- console.log(count)
+  allImg.forEach(img=>{
+    img.style.display="none"
+  })
+  
+  allImg[count].style.display="block"
+  count++
+  checkCount() 
 })
 
  
 nextBtn.addEventListener("click", ()=>{
-  allImg[count].style.display ="block"
+  allImg.forEach(img=>{
+    img.style.display="none"
+  })
+  
+  allImg[count].style.display="block"
   count++
-  checkCount()
-  allImg[count].style.display ="none"
-  console.log(count)
-     
+  checkCount() 
  })
 
 const checkCount= ()=>{
