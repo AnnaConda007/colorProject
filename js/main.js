@@ -1,32 +1,46 @@
-// вызов функций
-window.addEventListener("DOMContentLoaded", () => {
-  "use strict";
-  filterBlock();
-});
+ 
+const slider= ()=>{
 
-// modals
-const modal = () => {};
+  const backBtn = document.querySelector(".back")
+  const nextBtn = document.querySelector(".next")
+const allImg = document.querySelectorAll(".slider-item-wrap")
+const wrapImg = document.querySelectorAll("slider-item-wrap")
 
-// фильтр элементов
-filterBlock = () => {
-  const showColor = (btn, showSelector) => {
-    document.querySelector(btn).addEventListener("click", () => {
-      document.querySelectorAll(".color-wrap div").forEach((div) => {
-        div.style.display = "none";
-      });
-      document.querySelectorAll(".title-colors li").forEach((li) => {
-        li.classList.remove("active");
-      });
-      document.querySelector(btn).classList.add("active");
-      document.querySelectorAll(showSelector).forEach((div) => {
-        div.style.display = "block";
-      });
-    });
-  };
+ 
 
-  showColor(".pink", ".pink-color");
-  showColor(".blue", ".blue-color");
-  showColor(".yellow", ".yellow-color");
-  showColor(".green", ".green-color");
-  showColor(".all-collors", ".color-wrap div");
-};
+let count = 0
+allImg[count].style.display ="none"
+
+
+backBtn.addEventListener("click", ()=>{
+  allImg[count].style.display ="block"
+ count--
+ checkCount()
+ allImg[count].style.display ="none"
+
+ console.log(count)
+})
+
+ 
+nextBtn.addEventListener("click", ()=>{
+  allImg[count].style.display ="block"
+  count++
+  checkCount()
+  allImg[count].style.display ="none"
+  console.log(count)
+     
+ })
+
+const checkCount= ()=>{
+  count = (count>3) ? 0 : count
+  count = (count<0) ?3 : count
+  
+}
+
+
+
+
+
+ }
+
+ slider()

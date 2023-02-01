@@ -99,6 +99,7 @@ li {
 .slider-item-wrap {
   width: 50%;
   height: 70%;
+  margin: 10px;
 }
 .slider-img {
   width: 100%;
@@ -192,7 +193,7 @@ h4{
 
 
 
-@media (max-width:800px) { 
+@media (max-width:1000px) { 
   
 .color-wrap{
   grid-template-columns: repeat(3, 1fr);
