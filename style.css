@@ -26,3 +26,11 @@
 }
   
 
+.swiper-button-prew::after{ /*не работает */
+  color: rgb(3, 3, 3) ;
+}
+
+.swiper-scrollbAr{  /*не работает */
+color: black;
+border-radius: 5;
+}
