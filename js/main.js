@@ -1,32 +1,32 @@
-// вызов функций
-window.addEventListener("DOMContentLoaded", () => {
-  "use strict";
-  filterBlock();
-});
+ new Swiper (`.swiper`, {
+  navigation:{
+    nextEl:`.swiper-button-next`, // не работает !!!
+    prevEl:`.swiper-button-prew`
+  },
 
-// modals
-const modal = () => {};
+  pagination:{
+    el:`.swiper-pagination`, /* */
+    /*clickable: true,        ????  ниначто не влияет*/
+ /*dynamicBullets:true,  */
+   type: `progressbar`   ,   /*    заполнение линии наверху*/ 
+  /* scrollbar:{                    скрол не работает      
+    el:`.swiper-scrollbAr`,
+    draggable:true
+  } */
+  },
+  keyboard:{
+    enabled:true,
+    onlyInViewport:true,
+    pageUpDown:true
+  },
+  mousewheel:{
+    sensitivity:1,
+  },
+  slidesPerView:3,
 
-// фильтр элементов
-filterBlock = () => {
-  const showColor = (btn, showSelector) => {
-    document.querySelector(btn).addEventListener("click", () => {
-      document.querySelectorAll(".color-wrap div").forEach((div) => {
-        div.style.display = "none";
-      });
-      document.querySelectorAll(".title-colors li").forEach((li) => {
-        li.classList.remove("active");
-      });
-      document.querySelector(btn).classList.add("active");
-      document.querySelectorAll(showSelector).forEach((div) => {
-        div.style.display = "block";
-      });
-    });
-  };
+  spaceBetween:30,
 
-  showColor(".pink", ".pink-color");
-  showColor(".blue", ".blue-color");
-  showColor(".yellow", ".yellow-color");
-  showColor(".green", ".green-color");
-  showColor(".all-collors", ".color-wrap div");
-};
+  loop: true,
+
+
+})
