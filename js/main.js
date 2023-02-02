@@ -1,19 +1,26 @@
  new Swiper (`.swiper`, {
   navigation:{
-    nextEl:`.swiper-button-next`, // не работает !!!
-    prevEl:`.swiper-button-prew`
+    nextEl:`.swiper-button-next`, 
+    prevEl:`.swiper-button-prev` //  не работает !!!
   },
 
   pagination:{
-    el:`.swiper-pagination`, /* */
-    /*clickable: true,        ????  ниначто не влияет*/
+    el:`.swiper-pagination`,
+       type: `progressbar`   , 
+    /*clickable: true, */
  /*dynamicBullets:true,  */
-   type: `progressbar`   ,   /*    заполнение линии наверху*/ 
-  /* scrollbar:{                    скрол не работает      
-    el:`.swiper-scrollbAr`,
-    draggable:true
-  } */
+  
+
+    scrollbar:{                        
+    el:`.swiper-scrollbar`,
+    draggable:true       // не работает
+  }  
   },
+
+
+
+
+
   keyboard:{
     enabled:true,
     onlyInViewport:true,
