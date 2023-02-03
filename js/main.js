@@ -1,32 +1,41 @@
-// вызов функций
-window.addEventListener("DOMContentLoaded", () => {
-  "use strict";
-  filterBlock();
-});
+ const moreBtn = document.querySelector(".more-colors")
 
-// modals
-const modal = () => {};
 
-// фильтр элементов
-filterBlock = () => {
-  const showColor = (btn, showSelector) => {
-    document.querySelector(btn).addEventListener("click", () => {
-      document.querySelectorAll(".color-wrap div").forEach((div) => {
-        div.style.display = "none";
-      });
-      document.querySelectorAll(".title-colors li").forEach((li) => {
-        li.classList.remove("active");
-      });
-      document.querySelector(btn).classList.add("active");
-      document.querySelectorAll(showSelector).forEach((div) => {
-        div.style.display = "block";
-      });
-    });
-  };
 
-  showColor(".pink", ".pink-color");
-  showColor(".blue", ".blue-color");
-  showColor(".yellow", ".yellow-color");
-  showColor(".green", ".green-color");
-  showColor(".all-collors", ".color-wrap div");
+ 
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+xhr.responseType = "json";
+xhr.onreadystatechange = function() {
+
+  let response = xhr.response
+  console.log(response[1]);
+
+  for (let key in response) {
+  }
+  
 };
+xhr.send();
+
+
+
+/*
+
+ moreBtn.addEventListener("click",()=>{
+
+const xhr = new XMLHttpRequest()
+xhr.open("GET", "./color.json")
+//xhr.responseType = "json";
+
+
+const wrap = document.querySelector(".JSON")
+ wrap.innerHTML = ` <div >
+  <img src="img/allColors/pink.png" alt="цвет"  />
+</div>
+ `
+
+
+
+ })
+*/
