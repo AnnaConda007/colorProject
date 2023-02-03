@@ -12,7 +12,7 @@ xhr.onreadystatechange = function() {
   let response = xhr.response
   console.log(response[1]);
 
-  for (let key in response) {
+  for (let key in response) { 
   }
   
 };
