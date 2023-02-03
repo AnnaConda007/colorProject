@@ -1,205 +1,36 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-html, body {
-max-height: 100%;
- }
-
-
-main{
-  display: grid;
-  grid-template-columns: 150px 1fr 150px;
-}
-
-.grid-center{
-  grid-column: 2/3;
-}
-
-
-a{
-  text-decoration: none;
-  color: white;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-}
-.menu-btn {
-  width: 30px;
-  height: 30px;
-  position: relative;
-}
-.menu-btn span {
-  width: 30px;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #222222;
-  transition: all 0.5s;
-}
-.menu-btn span:nth-of-type(2) {
-  top: calc(50% - 5px);
-}
-.menu-btn span:nth-of-type(3) {
-  top: calc(50% + 5px);
-}
-
-.menu{
-  display: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-
-.form-substrate{
-    position: fixed;
-    justify-content: center;
-    align-content: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(7, 7, 25, 0.8);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    display: none;
-  }
-
-  .form-wrap{
-    text-align: center;
-    background-color: rgb(245, 242, 242);
-    width: 30%;
-    height: 20%;
-  }
-.slider-wrap {
-  display: flex;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  justify-content: center;
-}
-
-.slider-wrap button{
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-.slider-navigation {
-  width: 15px;
-  
-}
-
-.slider-item-wrap {
-  width: 50%;
-  height: 70%;
-}
-.slider-img {
-  width: 100%;
-  height: 100%;
-}
 
  
- h2{
-  text-align: center;
-}
-.container-colors-title ul{
-  display: flex;
-  justify-content: space-around;
-}
 
-
-.color-wrap{
-  margin-top: 10px;
-display:grid;
-gap: 10px;
-grid-template-columns: repeat(6, 1fr);
-justify-items:center;
-}
-
-.active{
-  background-color: orange;
-}
-
-.color-wrap div{
-  width: 160px;
-  height: 160px;
+.swiper {
+  width:95%;
+  height: 300px;
+  background-color: rgb(189, 246, 201);
 
 }
-.color-wrap div img{
+
+/*
+.swiper-wrapper{
+ width:50px;  не работает
+}
+*/
+
+.slide-img {
+ /* padding-top: 10px; 
+  padding-right: 10px; 
+  padding-bottom: 150px;  не работает 
+  padding-left: 10px; не работает*/
+  background-color: brown;
   width: 100%;
   height: 100%;
+
 }
-
-
-.more{
-  margin-top: 15px;
-}
-
-.more h2{
-  text-decoration: underline 
-}
-
-
-
-.accordion{
-  margin-top: 20px;
-}
-
-h4{
- margin-top: 15px;
- text-align: center;
-}
-
-.text-accordion{
-  background-color: antiquewhite;
-}
-
-
-.phone-form{
-  margin: 15px;
-  text-align: center;
-}
-.phone-form input{
-  margin: 5px;
-}
-
-.btn-up img{
-  width: 40px;
-  margin-left: 90%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width:800px) { 
   
-.color-wrap{
-  grid-template-columns: repeat(3, 1fr);
- }
 
- main{
-  display: grid;
-  grid-template-columns: 0px 1fr 0px;
+.swiper-button-prew::after{ /*не работает */
+  color: rgb(3, 3, 3) ;
 }
+
+.swiper-scrollbAr{  /*не работает */
+color: black;
+border-radius: 5;
 }
