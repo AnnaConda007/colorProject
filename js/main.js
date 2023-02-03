@@ -30,3 +30,48 @@ filterBlock = () => {
   showColor(".green", ".green-color");
   showColor(".all-collors", ".color-wrap div");
 };
+
+
+
+
+
+
+
+
+
+
+
+
+const accordionBlock = ()=>{
+  const accordionBtn = document.querySelectorAll(".btn-accordion")
+  const accordionText = document.querySelectorAll(".text-accordion")
+  
+  
+  accordionText.forEach(item => {
+    item.style.display="none"
+    item.addEventListener("click",function(){
+this.style.display="none"
+this.previousElementSibling.classList.remove("active")
+    })
+  })
+  
+  
+  
+  
+  accordionBtn.forEach(btn=>{
+    btn.addEventListener("click", function(){
+if( !this.classList.contains("active")){
+  this.nextElementSibling.style.display="block"
+      this.classList.add("active")
+} else{
+  this.nextElementSibling.style.display="none"
+  this.classList.remove("active")
+}
+    
+    })
+  })
+  
+  
+  }
+  
+  accordionBlock()

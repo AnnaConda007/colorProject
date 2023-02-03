@@ -155,7 +155,11 @@ justify-items:center;
 h4{
  margin-top: 15px;
  text-align: center;
+ cursor: pointer;
 }
+
+
+
 
 .text-accordion{
   background-color: antiquewhite;
