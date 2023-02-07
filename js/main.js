@@ -1,9 +1,23 @@
- 
-async function getResponse (){
-  let response = await fetch("color.json")  // await - дождаться пока переменной response присвоиться результать запроса fetch
-  let responseJSON = await response.json()
-  console.log(responseJSON)
+const btn =  document.querySelector(".more-colors")
+ const wrap = document.querySelector(".color-wrap")
+
+ let startShowCollor = 0
+ let lasttShowCollor=6
+
+ btn.addEventListener("click",async function getPosts(){
+  const response = await fetch("./js/color.json") 
+  const result = await response.json()
+ const showResponse = result.slice(startShowCollor,lasttShowCollor)
+  for(key in showResponse ){
+    wrap.innerHTML += `<div >
+    <img src=${showResponse[key].src} alt="цвет"  />
+   </div>` 
   }
-  
-  getResponse()
-  
+  startShowCollor+=6
+  lasttShowCollor+=6
+ 
+ if(lasttShowCollor>=result.length+lasttShowCollor){btn.remove()}
+
+  }
+
+ )
