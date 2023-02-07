@@ -1,23 +1,32 @@
+
 const btn =  document.querySelector(".more-colors")
- const wrap = document.querySelector(".color-wrap")
+const wrap = document.querySelector(".color-wrap")
 
+
+function closingForGetPosts(){  // замыкающая функция
+  const amountShowColor = 6
  let startShowCollor = 0
- let lasttShowCollor=6
+  let lastShowCollor=amountShowColor
 
- btn.addEventListener("click",async function getPosts(){
-  const response = await fetch("./js/color.json") 
-  const result = await response.json()
- const showResponse = result.slice(startShowCollor,lasttShowCollor)
-  for(key in showResponse ){
-    wrap.innerHTML += `<div >
-    <img src=${showResponse[key].src} alt="цвет"  />
-   </div>` 
-  }
-  startShowCollor+=6
-  lasttShowCollor+=6
+  async function getPosts(){
+    const response = await fetch("./js/color.json") 
+    const result = await response.json()
+   const showResponse = result.slice(startShowCollor,lastShowCollor)
+    for(key in showResponse ){
+      wrap.innerHTML += `<div >
+      <img src=${showResponse[key].src} alt="цвет"  />
+     </div>` 
+    }
+    startShowCollor+=amountShowColor
+    lastShowCollor+=amountShowColor
+   if(lastShowCollor>=result.length+amountShowColor){btn.remove()}
+    }
+return getPosts
+}
+
+let getPosts = closingForGetPosts()
+ btn.addEventListener("click",getPosts)
+
+
+
  
- if(lasttShowCollor>=result.length+lasttShowCollor){btn.remove()}
-
-  }
-
- )
