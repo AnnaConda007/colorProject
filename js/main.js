@@ -1,32 +1,32 @@
-// вызов функций
-window.addEventListener("DOMContentLoaded", () => {
-  "use strict";
-  filterBlock();
-});
 
-// modals
-const modal = () => {};
+const btn =  document.querySelector(".more-colors")
+const wrap = document.querySelector(".color-wrap")
 
-// фильтр элементов
-filterBlock = () => {
-  const showColor = (btn, showSelector) => {
-    document.querySelector(btn).addEventListener("click", () => {
-      document.querySelectorAll(".color-wrap div").forEach((div) => {
-        div.style.display = "none";
-      });
-      document.querySelectorAll(".title-colors li").forEach((li) => {
-        li.classList.remove("active");
-      });
-      document.querySelector(btn).classList.add("active");
-      document.querySelectorAll(showSelector).forEach((div) => {
-        div.style.display = "block";
-      });
-    });
-  };
 
-  showColor(".pink", ".pink-color");
-  showColor(".blue", ".blue-color");
-  showColor(".yellow", ".yellow-color");
-  showColor(".green", ".green-color");
-  showColor(".all-collors", ".color-wrap div");
-};
+function closingForGetPosts(){  // замыкающая функция
+  const amountShowColor = 6
+ let startShowCollor = 0
+  let lastShowCollor=amountShowColor
+
+  async function getPosts(){
+    const response = await fetch("./js/color.json") 
+    const result = await response.json()
+   const showResponse = result.slice(startShowCollor,lastShowCollor)
+    for(key in showResponse ){
+      wrap.innerHTML += `<div >
+      <img src=${showResponse[key].src} alt="цвет"  />
+     </div>` 
+    }
+    startShowCollor+=amountShowColor
+    lastShowCollor+=amountShowColor
+   if(lastShowCollor>=result.length+amountShowColor){btn.remove()}
+    }
+return getPosts
+}
+
+let getPosts = closingForGetPosts()
+ btn.addEventListener("click",getPosts)
+
+
+
+ 
