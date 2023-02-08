@@ -1,32 +1,15 @@
-// вызов функций
-window.addEventListener("DOMContentLoaded", () => {
-  "use strict";
-  filterBlock();
-});
-
-// modals
-const modal = () => {};
-
-// фильтр элементов
-filterBlock = () => {
-  const showColor = (btn, showSelector) => {
-    document.querySelector(btn).addEventListener("click", () => {
-      document.querySelectorAll(".color-wrap div").forEach((div) => {
-        div.style.display = "none";
-      });
-      document.querySelectorAll(".title-colors li").forEach((li) => {
-        li.classList.remove("active");
-      });
-      document.querySelector(btn).classList.add("active");
-      document.querySelectorAll(showSelector).forEach((div) => {
-        div.style.display = "block";
-      });
+  
+    document.querySelector("form").addEventListener("submit", (event)=>{
+      event.preventDefault();
+      const myForm = event.target;
+      console.log(myForm)
+      const formData = new FormData(myForm);
+      
+      fetch("", {// адрес чего нужно вставить ?
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => console.log("Form successfully submitted"))
+        .catch((error) => alert(error));
     });
-  };
-
-  showColor(".pink", ".pink-color");
-  showColor(".blue", ".blue-color");
-  showColor(".yellow", ".yellow-color");
-  showColor(".green", ".green-color");
-  showColor(".all-collors", ".color-wrap div");
-};
