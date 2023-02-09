@@ -1,4 +1,4 @@
-// вызов функций
+/*// вызов функций
 window.addEventListener("DOMContentLoaded", () => {
   "use strict";
   filterBlock();
@@ -31,7 +31,7 @@ filterBlock = () => {
   showColor(".all-collors", ".color-wrap div");
 };
 
-
+*/
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -44,7 +44,7 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log("Form successfully submitted", formData.toString() ))
+    .then(() => console.log("Form successfully submitted", new URLSearchParams(formData).toString()))
     .catch((error) => alert(error));
 };
 
