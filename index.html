@@ -144,19 +144,16 @@
     </form>
   
 
-    <form name="two" method="POST" data-netlify="true">
+    <form name="one" method="POST" data-netlify="true">
       <p>
        вторая форма
       </p>
-      <p>
-        <label>Your Name: <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
+        <div class="form-wrapper">
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="text" name="phone" placeholder="Ваш телефон" required>
+          <input type="text" name="email" placeholder="Ваш E-mail">
+        </div>
         <button type="submit">Send</button>
-      </p>
       </form>
 
    
