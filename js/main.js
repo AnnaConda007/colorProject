@@ -33,6 +33,7 @@ filterBlock = () => {
 
 */
 
+
 const handleSubmit = (event) => {
   event.preventDefault();
 
@@ -44,7 +45,7 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log( new URLSearchParams(formData).toString()))
+ //   .then(() => console.log( new URLSearchParams(formData).toString()))
    
 };
 
