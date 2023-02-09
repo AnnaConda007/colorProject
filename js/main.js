@@ -44,10 +44,8 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log("Form successfully submitted", new URLSearchParams(formData).toString()))
-    .catch((error) => alert(error));
+    .then(() => console.log( new URLSearchParams(formData).toString()))
+   
 };
 
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
+document.querySelector("form").addEventListener("submit", handleSubmit);
