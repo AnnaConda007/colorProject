@@ -49,4 +49,6 @@ const handleSubmit = (event) => {
    
 };
 
-document.querySelector("form").addEventListener("submit", handleSubmit);
+document.querySelectorAll("form").forEach(form=>{
+  addEventListener("submit", handleSubmit);
+})
