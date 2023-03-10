@@ -1,14 +1,12 @@
-// вызов функций
+ import modals from "./modules/modals";
+
 window.addEventListener("DOMContentLoaded", () => {
-  "use strict";
-  filterBlock();
+  modals()
 });
 
-// modals
-const modal = () => {};
-
+ 
 // фильтр элементов
-filterBlock = () => {
+/*filterBlock = () => {
   const showColor = (btn, showSelector) => {
     document.querySelector(btn).addEventListener("click", () => {
       document.querySelectorAll(".color-wrap div").forEach((div) => {
@@ -30,3 +28,4 @@ filterBlock = () => {
   showColor(".green", ".green-color");
   showColor(".all-collors", ".color-wrap div");
 };
+*/
